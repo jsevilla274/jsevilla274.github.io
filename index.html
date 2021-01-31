@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redirecting</title>
+</head>
+<body>
+	<p>Redirecting in <span id="seconds">5</span> seconds...</p>
+</body>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', (event) => {
+		var secondsElem = document.getElementById('seconds');
+		var seconds = 5;
+		setInterval(() => {
+			if (seconds > 0) {
+				seconds--;
+				secondsElem.textContent = seconds;
+			} else {
+				window.location.replace("https://github.com/jsevilla274");
+			}
+		}, 1000);
+	});
+</script>
+</html>
